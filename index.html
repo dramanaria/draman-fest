@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAMAN fest. ВІДНОВЛЕННЯ — 10 травня 2026</title>
+<meta name="description" content="Театральний фестиваль. Один день. Три події. Театр для відновлення: традиції та інновації. 10 травня 2026, Київ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive: #6B7A2A;
+    --olive-light: #8a9a35;
+    --gold: #C4872A;
+    --gold-light: #e0a040;
+    --sand: #D4945A;
+    --sand-pale: #f0e8d8;
+    --dark: #1A1A14;
+    --dark-warm: #2a2518;
+    --white: #FDFAF4;
+    --text: #3a3428;
+    --text-light: #6a5e50;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26,26,20,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(196,135,42,0.2);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: var(--dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.35) 40%,
+        rgba(0,0,0,0.7) 75%,
+        rgba(0,0,0,0.92) 100%),
+      url('fon.JPG') center center / cover no-repeat;
+  }
+
+  /* Texture overlay */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 60px 60px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.3s;
+  }
+
+  .hero-title {
+    line-height: 0.9;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.5s;
+  }
+
+  .hero-title-line1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 80px);
+    color: var(--white);
+    display: block;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5);
+  }
+
+  .hero-title-line2 {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 8vw, 100px);
+    color: var(--white);
+    display: block;
+    letter-spacing: 3px;
+    line-height: 0.9;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5);
+  }
+
+  .hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.7s;
+  }
+
+  .hero-subtitle-line {
+    font-family: var(--font-serif);
+    font-size: clamp(15px, 2vw, 20px);
+    color: #ffffff;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+  }
+
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-size: clamp(16px, 1.8vw, 22px);
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 48px;
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.9s;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 1.1s;
+  }
+
+  .btn-primary {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--olive);
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-primary:hover {
+    background: var(--olive-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.8);
+    background: transparent;
+    border: 1px solid rgba(253,250,244,0.3);
+    padding: 16px 36px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s, transform 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  /* Partners strip */
+  .hero-partners {
+    position: relative;
+    z-index: 2;
+    padding: 20px 60px 28px;
+    border-top: 1px solid rgba(196,135,42,0.2);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: rgba(26,26,20,0.6);
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 1.3s;
+  }
+
+  .partners-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.35);
+    white-space: nowrap;
+  }
+
+  .partner-name {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.5);
+    transition: color 0.3s;
+  }
+
+  .partner-name:hover { color: var(--gold); }
+
+  /* ── SECTION BASE ── */
+  section {
+    padding: 100px 60px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--olive);
+    margin-bottom: 40px;
+  }
+
+  /* ── BLOCK 2: ABOUT ── */
+  #about {
+    background: var(--white);
+    max-width: 100%;
+    padding: 100px 0;
+  }
+
+  .about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+
+  .about-text p.highlight {
+    font-size: 20px;
+    font-style: italic;
+    color: var(--olive);
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+  }
+
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .about-card {
+    background: var(--dark);
+    padding: 28px 24px;
+    transition: background 0.3s;
+  }
+
+  .about-card:hover { background: var(--dark-warm); }
+
+  .about-card-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .about-card-title {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .about-card-text {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: rgba(253,250,244,0.65);
+    line-height: 1.6;
+  }
+
+  .about-meta {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(107,122,42,0.2);
+    margin-top: 8px;
+  }
+
+  .meta-stat { text-align: center; }
+
+  .meta-number {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--olive);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .meta-text {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-top: 4px;
+  }
+
+  .about-goal {
+    background: var(--sand-pale);
+    padding: 32px 40px;
+    margin-top: 40px;
+    border-left: 4px solid var(--olive);
+  }
+
+  .about-goal-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .about-goal-text {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .for-whom {
+    margin-top: 32px;
+    padding: 24px 32px;
+    background: var(--sand-pale);
+    border-left: 3px solid var(--gold);
+  }
+
+  .for-whom-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .for-whom-text {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── BLOCK 3: PROGRAM ── */
+  #program {
+    background: var(--dark);
+    max-width: 100%;
+    padding: 100px 0;
+  }
+
+  .program-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .program-inner .section-title { color: var(--white); }
+
+  .program-events {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .event-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9);
+  }
+
+  .event-card {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(196,135,42,0.1);
+    transition: border-color 0.3s, background 0.3s;
+    overflow: hidden;
+  }
+
+  .event-card:hover {
+    border-color: rgba(196,135,42,0.4);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .event-time {
+    background: var(--olive);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .event-hour {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--white);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .event-duration {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.6);
+    margin-top: 8px;
+  }
+
+  .event-body {
+    padding: 40px 48px;
+  }
+
+  .event-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .event-title {
+    font-family: var(--font-serif);
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .event-desc {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: rgba(253,250,244,0.65);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 680px;
+  }
+
+  .event-highlight {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-style: italic;
+    color: var(--gold-light);
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+    margin-bottom: 24px;
+    max-width: 600px;
+  }
+
+  .event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .event-meta-item {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(253,250,244,0.45);
+  }
+
+  .event-meta-item strong {
+    color: rgba(253,250,244,0.7);
+    font-weight: 500;
+  }
+
+  .event-for-whom {
+    background: rgba(107,122,42,0.12);
+    border-left: 2px solid var(--olive);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+
+  .event-for-whom-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--olive-light);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .event-for-whom ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .event-for-whom li {
+    font-size: 13px;
+    color: rgba(253,250,244,0.6);
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .event-for-whom li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  .event-team {
+    margin-bottom: 28px;
+  }
+
+  .event-team-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.35);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .event-team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .event-team-person {
+    font-size: 13px;
+    color: rgba(253,250,244,0.6);
+  }
+
+  .event-team-person strong {
+    color: rgba(253,250,244,0.85);
+    font-weight: 500;
+  }
+
+  .event-venues {
+    font-size: 12px;
+    color: rgba(253,250,244,0.35);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .btn-event {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--olive);
+    padding: 14px 28px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-event:hover {
+    background: var(--olive);
+    transform: translateY(-2px);
+  }
+
+  /* ── BLOCK 4: ABOUT FUND ── */
+  #fund {
+    background: var(--sand-pale);
+    max-width: 100%;
+    padding: 100px 0;
+  }
+
+  .fund-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .fund-text p {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .fund-link {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive);
+    text-decoration: none;
+    border-bottom: 1px solid var(--olive);
+    padding-bottom: 2px;
+    margin-top: 8px;
+    transition: color 0.3s;
+  }
+
+  .fund-link:hover { color: var(--gold); border-color: var(--gold); }
+
+  .fund-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fund-fact {
+    background: var(--white);
+    padding: 24px 28px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .fund-fact:hover { border-left-color: var(--olive); }
+
+  .fund-fact-text {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  /* ── BLOCK 5: PARTICIPATION ── */
+  #participate {
+    background: var(--dark);
+    max-width: 100%;
+    padding: 100px 0;
+  }
+
+  .participate-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: center;
+  }
+
+  .participate-inner .section-title { color: var(--white); }
+  .participate-inner .section-label { justify-content: center; }
+
+  .participate-text {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(253,250,244,0.65);
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .participate-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .btn-participate {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(196,135,42,0.4);
+    padding: 20px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .btn-participate:hover {
+    background: rgba(107,122,42,0.2);
+    border-color: var(--olive);
+  }
+
+  .btn-participate-time {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--olive-light);
+    letter-spacing: 2px;
+  }
+
+  .btn-participate-arrow {
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  /* ── BLOCK 6: LOCATION ── */
+  #location {
+    background: var(--white);
+    max-width: 100%;
+    padding: 100px 0;
+  }
+
+  .location-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .location-address {
+    margin-bottom: 32px;
+  }
+
+  .location-venue {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--olive);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .location-street {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .location-city {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    text-transform: uppercase;
+  }
+
+  .location-map {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    filter: grayscale(20%) contrast(1.05);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark-warm);
+    padding: 60px;
+    border-top: 1px solid rgba(196,135,42,0.15);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  .footer-brand span { color: var(--gold); }
+
+  .footer-tagline {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(253,250,244,0.4);
+    margin-bottom: 24px;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-contact {
+    font-size: 13px;
+    color: rgba(253,250,244,0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-contact:hover { color: var(--gold); }
+
+  .footer-col-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-social a {
+    font-size: 13px;
+    color: rgba(253,250,244,0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-social a:hover { color: var(--gold); }
+
+  .footer-partners-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-partner {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(253,250,244,0.4);
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+    color: rgba(253,250,244,0.3);
+    margin-bottom: 12px;
+  }
+
+  .footer-legal {
+    font-size: 11px;
+    color: rgba(253,250,244,0.2);
+    line-height: 1.7;
+    max-width: 800px;
+  }
+
+
+  .partners-logos {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .partner-logo {
+    height: 72px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .partner-logo:hover { transform: scale(1.05); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+
+  .footer-partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .footer-partner-logo {
+    height: 56px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+  }
+
+  .footer-partner-logo:hover { opacity: 1; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 90px 24px 60px; }
+    .hero-partners { padding: 16px 24px; gap: 20px; }
+    section { padding: 60px 24px; }
+    .about-inner, .fund-inner, .location-inner, .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-cards { grid-template-columns: 1fr 1fr; }
+    .event-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9);
+  }
+
+  .event-card { grid-template-columns: 80px 1fr; }
+    .event-hour { font-size: 28px; }
+    .event-body { padding: 24px; }
+    .program-inner, .participate-inner, .fund-inner .location-inner { padding: 0 24px; }
+    footer { padding: 40px 24px; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+
+    /* Hero */
+    .hero-content { padding: 90px 20px 40px; }
+    .hero-title-line1 { font-size: clamp(28px, 8vw, 52px); letter-spacing: 2px; }
+    .hero-title-line2 { font-size: clamp(36px, 10vw, 64px); letter-spacing: 1px; }
+    .hero-subtitle-line { font-size: 15px; }
+    .hero-tagline { font-size: 15px; }
+    .hero-buttons { flex-direction: column; gap: 12px; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; padding: 14px 20px; }
+    .hero-partners { padding: 16px 20px; gap: 12px; flex-wrap: wrap; }
+    .partner-logo { height: 48px; max-width: 100px; }
+
+    /* About */
+    .about-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+    .about-cards { grid-template-columns: 1fr 1fr; }
+    .about-text p { font-size: 16px; }
+    .about-meta { flex-wrap: wrap; gap: 20px; }
+
+    /* Program */
+    .program-inner { padding: 0 20px; }
+    .event-card { grid-template-columns: 70px 1fr; }
+    .event-time { padding: 20px 8px; }
+    .event-hour { font-size: 24px; }
+    .event-duration { font-size: 9px; }
+    .event-body { padding: 16px; }
+    .event-title { font-size: 22px; }
+    .event-desc { font-size: 14px; }
+    .event-body > div { padding: 0 !important; }
+
+    /* Photos in event cards */
+    .event-body img, .event-body > div > img,
+    .event-body > div[style*="grid"] { 
+      width: 100%; 
+    }
+    div[style*="grid-template-columns:1fr 1fr"] {
+      display: block !important;
+    }
+    div[style*="grid-template-columns:1fr 1fr"] img {
+      width: 100% !important;
+      height: 180px !important;
+      margin-bottom: 2px;
+    }
+
+    /* Fund */
+    .fund-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+
+    /* Participate */
+    .participate-inner { padding: 0 20px; }
+    .btn-participate { flex-direction: column; gap: 4px; padding: 16px; text-align: center; }
+    .btn-participate-time { font-size: 20px; }
+
+    /* Location */
+    .location-inner { grid-template-columns: 1fr; gap: 24px; padding: 0 20px; }
+    .location-map { height: 280px; }
+
+    /* Footer */
+    footer { padding: 40px 20px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-partner-logos { gap: 12px; }
+    .footer-partner-logo { height: 40px; }
+
+    /* Sections */
+    #about, #fund, #program, #participate, #location { padding: 60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#hero" class="nav-logo">DRAMAN<span>fest</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Про фестиваль</a></li>
+    <li><a href="#program">Програма</a></li>
+    <li><a href="#fund">Фонд</a></li>
+    <li><a href="#participate">Участь</a></li>
+    <li><a href="#location">Місце</a></li>
+  </ul>
+</nav>
+
+<!-- BLOCK 1: HERO -->
+<div id="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <p class="hero-label">Театральний фестиваль</p>
+    <h1 class="hero-title">
+      <span class="hero-title-line1">DRAMAN fest</span>
+      <span class="hero-title-line2">ВІДНОВЛЕННЯ</span>
+    </h1>
+    <div class="hero-subtitle">
+      <span class="hero-subtitle-line">Театральний фестиваль</span>
+      <span class="hero-subtitle-line">10 травня 2026</span>
+      <span class="hero-subtitle-line">Київ, вул. Богдана Хмельницького, 42/32</span>
+    </div>
+    <p class="hero-tagline">Один день. Три події. Театр для відновлення: традиції та інновації.</p>
+    <div class="hero-buttons">
+      <a href="#participate" class="btn-primary">Подати заявку</a>
+      <a href="#program" class="btn-secondary">Програма ↓</a>
+    </div>
+  </div>
+
+  <div class="hero-partners">
+    <span class="partners-label">Партнери</span>
+    <div class="partners-logos">
+      <img src="vcentri_logo.png" alt="Vcentri Hub" class="partner-logo">
+      <img src="lifeenjoy logo.png" alt="БФ Життєлюб" class="partner-logo">
+      <img src="DRAMAN logo.png" alt="DRAMAN Foundation" class="partner-logo">
+      <img src="Zoriana logo.png" alt="Зоряна Майстерня" class="partner-logo">
+      <img src="Rada_logo.png" alt="Рада ВПО" class="partner-logo">
+      <img src="valkiria_logo.png" alt="Ukrainian Walkyrie" class="partner-logo">
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 2: ABOUT -->
+<div id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-label">Концепція</p>
+      <h2 class="section-title">Що таке DRAMAN fest. ВІДНОВЛЕННЯ?</h2>
+      <div class="section-divider"></div>
+
+      <p>Відновлення — завдання, яке вирішує кожен із нас щодня. І кожна компанія, громада, держава. В умовах війни разові підходи мирного часу не працюють: обставини зберігаються, і відновлення стає перманентним процесом.</p>
+
+      <p>Театр — традиційна технологія відновлення з тисячолітнім досвідом. Він збагачувався саме в найскладніші часи. Наш час і наші обставини також народжують нові практики й підходи, які вже пишуть нову сторінку театральної історії.</p>
+
+      <p>З 2022 року БФ «DRAMAN» досліджує і застосовує театральні практики для вирішення гострих проблем воєнного часу: протидія стресу і вигоранню, підтримка психоемоційного благополуччя, відновлення після руйнівних подій, пошук нових смислів, соціальна інтеграція та адаптація до нових обставин.</p>
+
+      <p>DRAMAN fest — це найбільш показові з реалізованих проектів, що демонструють дію театру на різних рівнях.</p>
+
+      <div class="about-goal">
+        <p class="about-goal-label">Мета фестивалю</p>
+        <p class="about-goal-text">Представити і обговорити сучасні театральні практики відновлення — традиції та інновації.</p>
+      </div>
+
+      <div class="for-whom">
+        <p class="for-whom-label">Для кого</p>
+        <p class="for-whom-text">Фестиваль — для тих, хто дбає про ментальне здоров'я: своє особисте, своєї команди, своїх клієнтів.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon">🧍</div>
+          <p class="about-card-title">Індивідуальний</p>
+          <p class="about-card-text">Протидія стресу, вигоранню, підтримка ментального здоров'я</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🤝</div>
+          <p class="about-card-title">Командний</p>
+          <p class="about-card-text">Творча реалізація як ресурс групи, розкриття потенціалу</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🌐</div>
+          <p class="about-card-title">Соціальний</p>
+          <p class="about-card-text">Подолання ізоляції, інтеграція, адаптація до нових обставин</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🏛️</div>
+          <p class="about-card-title">Суспільний</p>
+          <p class="about-card-text">Широкий доступ до культури, нові практики для суспільства</p>
+        </div>
+        <div class="about-meta">
+          <div class="meta-stat">
+            <div class="meta-number">500+</div>
+            <div class="meta-text">учасників тренінгів</div>
+          </div>
+          <div class="meta-stat">
+            <div class="meta-number">10+</div>
+            <div class="meta-text">вистав поставлено</div>
+          </div>
+          <div class="meta-stat">
+            <div class="meta-number">2022</div>
+            <div class="meta-text">рік початку роботи</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 3: PROGRAM -->
+<div id="program">
+  <div class="program-inner">
+    <p class="section-label">Програма фестивалю</p>
+    <h2 class="section-title" style="color:var(--white)">10 травня 2026</h2>
+    <div class="section-divider"></div>
+
+    <div class="program-events">
+
+      <!-- EVENT 1 -->
+      <div class="event-card">
+        <div class="event-time">
+          <div class="event-hour">11:00</div>
+          <div class="event-duration">1,5 год · до 24 осіб</div>
+        </div>
+        <div class="event-body">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+            <img src="par_foto.jpg" alt="Тренінг Випусти пар" class="event-photo" style="height:260px;">
+            <img src="para_afisha.png" alt="Афіша Випусти пар" class="event-photo" style="height:260px; object-fit:contain; background:#111;">
+          </div>
+          <div style="padding: 0">
+          <p class="event-tag" style="margin-top:20px">Тренінг</p>
+          <h3 class="event-title">«Випусти пар»</h3>
+          <p class="event-desc">Розроблений для швидкого покращення психоемоційного стану та ініціації стабільних змін. Спеціальний модуль театралізованої програми «Метаморфози» — лауреата премії КМДА, ТОП-100 кейсів 2025 року у категорії співпраці влади та громади.</p>
+
+          <div class="event-for-whom">
+            <p class="event-for-whom-label">Для кого</p>
+            <ul>
+              <li>Спеціалісти з велбінгу та ментального здоров'я компаній і організацій</li>
+              <li>Представники НГО, що організовують програми для бенефіціарів і волонтерів</li>
+              <li>Всі, хто шукає ефективні методи роботи з ментальним здоров'ям</li>
+            </ul>
+          </div>
+
+          <div class="event-team">
+            <p class="event-team-label">Проводять</p>
+            <div class="event-team-list">
+              <p class="event-team-person"><strong>Олександр Сітухо</strong> — тренер, драматург, актор, продюсер, президент БФ «DRAMAN»</p>
+              <p class="event-team-person"><strong>Аліна Кліманська</strong> — тренер, акторка, керівник проєктів БФ «DRAMAN»</p>
+              <p class="event-team-person"><strong>Юлія Войтенко</strong> — психолог, тренер, акторка</p>
+            </div>
+          </div>
+
+          <p class="event-venues">Проводився на базі: Vcentri Hub КМДА · БФ «Життєлюб» · НАК «Укренерго» · Raiffeisen Bank · Форум HR Days 2025</p>
+
+          <a href="#participate" class="btn-event">Подати заявку на тренінг</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 2 -->
+      <div class="event-card">
+        <div class="event-time" style="background: var(--gold);">
+          <div class="event-hour">15:00</div>
+          <div class="event-duration">80 хвилин</div>
+        </div>
+        <div class="event-body">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+            <img src="rakugo_foto.jpg" alt="Поляна метеликів" class="event-photo" style="height:260px;">
+            <img src="rakugo_afisha.jpg" alt="Афіша Поляна метеликів" class="event-photo" style="height:260px; object-fit:contain; background:#111;">
+          </div>
+          <div style="padding: 0">
+          <p class="event-tag" style="margin-top:20px">Перша в Україні · Прем'єра</p>
+          <h3 class="event-title">«Поляна метеликів»</h3>
+          <p class="event-desc">Результат дослідження традиційних театральних практик, придатних для людей з обмеженою мобільністю. Ракуго — традиційний японський жанр моновиступу віком понад 400 років, надзвичайно популярний у Японії, США, Канаді. В Україні до цього був невідомий.</p>
+
+          <p class="event-highlight">Ракуго має величезний психореабілітаційний потенціал — і відкриває можливості для людей, яким недоступні інші форми театру.</p>
+
+          <div class="event-for-whom">
+            <p class="event-for-whom-label">Для кого</p>
+            <ul>
+              <li>Всі, хто цікавиться японською культурою та міжкультурним діалогом</li>
+              <li>Ті, кому важливі питання активного довголіття та творчого розвитку</li>
+              <li>Фахівці у сфері реабілітації</li>
+            </ul>
+          </div>
+
+          <div class="event-team">
+            <p class="event-team-label">Режисерка · Виконавці</p>
+            <div class="event-team-list">
+              <p class="event-team-person"><strong>Аліна Кліманська</strong> — режисерка</p>
+              <p class="event-team-person">Актори інклюзивної театральної студії DRAMAN</p>
+            </div>
+          </div>
+
+          <a href="#participate" class="btn-event">Подати заявку на виставу</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 3 -->
+      <div class="event-card">
+        <div class="event-time" style="background: var(--dark-warm); border-left: 3px solid var(--olive);">
+          <div class="event-hour">18:30</div>
+          <div class="event-duration">1 год 15 хв · без антракту</div>
+        </div>
+        <div class="event-body">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+            <img src="perehid_foto.jpg" alt="Перехід" class="event-photo" style="height:260px;">
+            <img src="perehid_afisha.jpg" alt="Афіша Перехід" class="event-photo" style="height:260px; object-fit:contain; background:#111;">
+          </div>
+          <div style="padding: 0">
+          <p class="event-tag" style="margin-top:20px">Документальна вистава · Сторітелінг</p>
+          <h3 class="event-title">«Перехід»</h3>
+          <p class="event-desc">Вистава побудована на основі особистих історій, що пройшли драматургічну обробку та об'єднані спільними музичними, сценічними рішеннями і режисурою. Всі актори мають статус ВПО і пройшли повний курс програми «Метаморфози».</p>
+
+          <div class="event-for-whom">
+            <p class="event-for-whom-label">Для кого</p>
+            <ul>
+              <li>Фахівці у сфері інтеграції та психосоціальної реабілітації ВПО та інших вразливих груп</li>
+              <li>Ті, хто шукає можливості реалізації корпоративних театральних проєктів для захисту і розвитку людського капіталу</li>
+              <li>Ті, хто шукає ресурс для власного відновлення і нових смислів</li>
+            </ul>
+          </div>
+
+          <div class="event-team">
+            <p class="event-team-label">Режисерка · Актори</p>
+            <div class="event-team-list">
+              <p class="event-team-person"><strong>Зоряна Максимець</strong> — режисерка</p>
+              <p class="event-team-person">Брильова Ірина</p>
+              <p class="event-team-person">Брюханов Олександр</p>
+              <p class="event-team-person">Гребенюк Марина</p>
+              <p class="event-team-person">Захаров Олег</p>
+              <p class="event-team-person">Нічволодова Карина</p>
+              <p class="event-team-person">Новікова Олена</p>
+              <p class="event-team-person">Плахотнюк Ірина</p>
+            </div>
+          </div>
+
+          <div class="event-meta">
+            <span class="event-meta-item"><strong>Прем'єра:</strong> 10 квітня 2026</span>
+            <span class="event-meta-item"><strong>Майданчик:</strong> Театр драматургів, Київ</span>
+          </div>
+
+          <a href="#participate" class="btn-event">Подати заявку на виставу</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 4: FUND -->
+<div id="fund">
+  <div class="fund-inner">
+    <div class="fund-text">
+      <p class="section-label">Організатор</p>
+      <h2 class="section-title">Благодійний фонд «DRAMAN»</h2>
+      <div class="section-divider"></div>
+      <p>Культурна інституція, що розробляє та впроваджує театральні програми відновлення для різних цільових груп, забезпечує доступ до театрального мистецтва для вразливих категорій населення, підтримує нові театральні проєкти та творчих особистостей у сфері театру, сприяє розвитку театрального меценатства.</p>
+      <a href="https://draman.space" target="_blank" class="fund-link">draman.space →</a>
+    </div>
+
+    <div class="fund-facts">
+      <div class="fund-fact">
+        <p class="fund-fact-text">🏆 ТОП-100 кейсів КМДА 2025 у категорії співпраці влади та громади (програма «Метаморфози»)</p>
+      </div>
+      <div class="fund-fact">
+        <p class="fund-fact-text">🎭 Член Національної спілки театральних діячів України</p>
+      </div>
+      <div class="fund-fact">
+        <p class="fund-fact-text">🏥 Подяки від Головного військового клінічного госпіталю та Управління суспільних комунікацій КМДА</p>
+      </div>
+      <div class="fund-fact">
+        <p class="fund-fact-text">🤝 Партнер Ради ВПО Київської міської військової адміністрації</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 5: PARTICIPATION -->
+<div id="participate">
+  <div class="participate-inner">
+    <p class="section-label">Участь</p>
+    <h2 class="section-title">Як взяти участь</h2>
+    <div class="section-divider" style="margin: 0 auto 40px;"></div>
+    <p class="participate-text">Участь у подіях фестивалю — за індивідуальними запрошеннями, які надсилаються на електронну пошту.</p>
+
+    <div class="participate-buttons">
+      <a href="#" class="btn-participate">
+        <span class="btn-participate-time">11:00</span>
+        <span>Подати заявку на тренінг «Випусти пар»</span>
+        <span class="btn-participate-arrow">→</span>
+      </a>
+      <a href="#" class="btn-participate">
+        <span class="btn-participate-time">15:00</span>
+        <span>Подати заявку на виставу «Поляна метеликів»</span>
+        <span class="btn-participate-arrow">→</span>
+      </a>
+      <a href="#" class="btn-participate">
+        <span class="btn-participate-time">18:30</span>
+        <span>Подати заявку на виставу «Перехід»</span>
+        <span class="btn-participate-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 6: LOCATION -->
+<div id="location">
+  <div class="location-inner">
+    <div>
+      <p class="section-label">Місце проведення</p>
+      <h2 class="section-title">Як нас знайти</h2>
+      <div class="section-divider"></div>
+      <div class="location-address">
+        <p class="location-street">вул. Богдана Хмельницького, 42/32</p>
+        <p class="location-city">Київ, Україна</p>
+        <p class="location-venue" style="margin-top:12px; font-size:22px;">в приміщенні Театру Імпровізації</p>
+      </div>
+    </div>
+    <div>
+      <iframe
+        class="location-map"
+        src="https://maps.google.com/maps?q=%D0%B2%D1%83%D0%BB.+%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0+%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+42%2F32+%D0%9A%D0%B8%D1%97%D0%B2&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand">DRAMAN<span>fest</span></p>
+      <p class="footer-tagline">Театр для відновлення: традиції та інновації</p>
+      <div class="footer-contacts">
+        <a href="mailto:info@draman.space" class="footer-contact">✉ info@draman.space</a>
+        <a href="tel:+380731106807" class="footer-contact">📞 +38 073 110 68 07</a>
+        <a href="https://t.me/dramaninfo" target="_blank" class="footer-contact">⟩ Telegram @dramaninfo</a>
+        <a href="https://draman.space" target="_blank" class="footer-contact">🌐 draman.space</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Партнери</p>
+      <div class="footer-partner-logos">
+        <img src="vcentri_logo.png" alt="Vcentri Hub" class="footer-partner-logo">
+        <img src="lifeenjoy logo.png" alt="БФ Життєлюб" class="footer-partner-logo">
+        <img src="DRAMAN logo.png" alt="DRAMAN Foundation" class="footer-partner-logo">
+        <img src="Zoriana logo.png" alt="Зоряна Майстерня" class="footer-partner-logo">
+        <img src="Rada_logo.png" alt="Рада ВПО" class="footer-partner-logo">
+        <img src="valkiria_logo.png" alt="Ukrainian Walkyrie" class="footer-partner-logo">
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Соціальні мережі</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/draman_tt" target="_blank">Instagram @draman_tt</a>
+        <a href="https://facebook.com/draman_tt" target="_blank">Facebook @draman_tt</a>
+        <a href="https://t.me/dramanartclub" target="_blank">Telegram @dramanartclub</a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2026 Благодійний фонд «DRAMAN». Всі права захищені.</p>
+    <p class="footer-legal">Участь у фестивалі не передбачає передачі прав на використання — повністю або частково — технік, практик, аудіовізуальних матеріалів та інших об'єктів інтелектуальної власності, що належать БФ «DRAMAN». Їх використання можливе виключно на умовах окремої угоди.</p>
+  </div>
+</footer>
+
+</body>
+</html>
